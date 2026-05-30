@@ -84,42 +84,12 @@
       text-align: center;
       padding: 7rem 2rem 5rem;
       overflow: hidden;
-      background: linear-gradient(160deg, #1a3d2e 0%, #2d5016 50%, #1a3d4f 100%);
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 80%, rgba(45,80,22,0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(74,143,168,0.13) 0%, transparent 55%),
+        linear-gradient(160deg, #f0ebe0 0%, #e8f0e0 40%, #deeaf5 100%);
     }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('hero.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      opacity: 0.45;
-      z-index: 0;
-    }
-    .hero-bg-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(26,61,46,0.55) 0%,
-        rgba(45,80,22,0.45) 40%,
-        rgba(26,61,79,0.65) 100%
-      );
-      z-index: 1;
-    }
-    .hero > *:not(.hero-bg):not(.hero-bg-overlay):not(.hero-particles) {
-      position: relative;
-      z-index: 2;
-    }
-    .hero-particles { z-index: 2; }
-    .hero-byline { color: var(--mint); }
-    .hero-logo { color: #f8f5ef; }
-    .hero-logo span { color: var(--amber); }
-    .hero-sub { color: rgba(248,245,239,0.8); }
-    .hero-divider { background: linear-gradient(90deg, var(--amber), var(--mint)); }
-    .hero-question { color: #f8f5ef; }
-    .hero-question em { color: var(--mint); }
-    .hero-tagline { color: rgba(248,245,239,0.8); }
-    .scroll-cue span { color: rgba(248,245,239,0.5); }
+    .hero-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
     .particle {
       position: absolute;
       border-radius: 50% 20% 50% 20%;
@@ -473,20 +443,11 @@
       padding: 9rem 2rem; color: var(--white);
     }
     .founder-inner {
-      max-width: 960px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr 1.5fr;
-      gap: 4rem; align-items: start;
+      max-width: 860px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 5rem; align-items: start;
     }
-    @media (max-width: 800px) { .founder-inner { grid-template-columns: 1fr; gap: 3rem; } }
-    .founder-photo {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 2px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-      filter: sepia(15%) contrast(1.05);
-    }
+    @media (max-width: 680px) { .founder-inner { grid-template-columns: 1fr; gap: 3rem; } }
     .founder-label {
       font-size: 0.68rem; letter-spacing: 0.42em;
       text-transform: uppercase; color: var(--amber); margin-bottom: 2rem;
@@ -597,8 +558,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-bg-overlay"></div>
     <div class="hero-particles" id="particles"></div>
     <p class="hero-byline">Stacy La Mell &nbsp;·&nbsp; Founder</p>
     <h1 class="hero-logo">Tev<span>AI</span></h1>
@@ -835,15 +794,12 @@
           <p class="founder-label">The Builder</p>
           <h3 class="founder-name">Stacy<br>La Mell</h3>
           <div class="founder-credentials">
-            <p class="credential">Environmental educator — 10 years directing programs on a 230-acre farm-based nature center</p>
-            <p class="credential">AI innovator and founder — HevrutAI forensic AI verification system</p>
-            <p class="credential">Youth &amp; Community Director — North Suburban Synagogue Beth El, Highland Park, Illinois</p>
+            <p class="credential">Environmental educator, 10 years on a 230-acre farm-based nature center</p>
+            <p class="credential">AI innovator and founder, HevrutAI forensic verification system</p>
+            <p class="credential">Youth &amp; community director, North Shore Suburban Synagogue Beth El, Highland Park, IL</p>
             <p class="credential">Visual artist and lifelong systems thinker</p>
             <p class="credential">Rooted in the conviction that education, land, and technology belong together</p>
           </div>
-        </div>
-        <div class="reveal">
-          <img src="founder.jpg" alt="Stacy La Mell in Jerusalem" class="founder-photo" />
         </div>
         <div class="reveal">
           <p class="founder-bio">"The idea emerged from a decade of environmental education and a lifelong interest in systems thinking. A simple question led to the concept: what if the distance between systems became the solution instead of the problem?"</p>
