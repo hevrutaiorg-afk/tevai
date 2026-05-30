@@ -66,11 +66,15 @@
       font-size: 0.78rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--forest);
+      color: #ffffff;
       text-decoration: none;
       transition: color 0.3s;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
     }
     .nav-links a:hover { color: var(--amber); }
+    nav.scrolled .nav-links a { color: var(--forest); text-shadow: none; }
+    nav.scrolled .nav-logo { color: var(--forest); text-shadow: none; }
+    .nav-logo { color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     @media (max-width: 600px) { .nav-links { display: none; } }
 
     /* ── HERO ── */
@@ -91,8 +95,8 @@
       inset: 0;
       background-image: url('hero.jpg');
       background-size: cover;
-      background-position: center 30%;
-      opacity: 0.65;
+      background-position: center 40%;
+      opacity: 0.75;
       z-index: 0;
     }
     .hero-bg-overlay {
@@ -100,9 +104,9 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(15,35,20,0.5) 0%,
-        rgba(26,55,20,0.35) 40%,
-        rgba(15,30,40,0.55) 100%
+        rgba(10,25,15,0.55) 0%,
+        rgba(20,45,15,0.45) 40%,
+        rgba(10,25,35,0.70) 100%
       );
       z-index: 1;
     }
@@ -111,15 +115,15 @@
       z-index: 2;
     }
     .hero-particles { z-index: 2; }
-    .hero-byline { color: var(--mint); }
-    .hero-logo { color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
-    .hero-logo span { color: var(--amber); }
-    .hero-sub { color: rgba(248,245,239,0.85); }
-    .hero-divider { background: linear-gradient(90deg, var(--amber), var(--mint)); }
-    .hero-question { color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.4); }
-    .hero-question em { color: var(--mint); }
-    .hero-tagline { color: rgba(248,245,239,0.85); }
-    .scroll-cue span { color: rgba(248,245,239,0.5); }
+    .hero-byline { color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.9); }
+    .hero-logo { color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,0.7); }
+    .hero-logo span { color: var(--amber); text-shadow: 0 2px 20px rgba(0,0,0,0.7); }
+    .hero-sub { color: #ffffff; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero-divider { background: linear-gradient(90deg, var(--amber), rgba(255,255,255,0.6)); }
+    .hero-question { color: #ffffff; text-shadow: 0 2px 16px rgba(0,0,0,0.9); font-weight: 400; }
+    .hero-question em { color: var(--mint); text-shadow: 0 1px 12px rgba(0,0,0,0.9); }
+    .hero-tagline { color: #ffffff; text-shadow: 0 1px 8px rgba(0,0,0,0.9); }
+    .scroll-cue span { color: rgba(255,255,255,0.7); }
     .particle {
       position: absolute;
       border-radius: 50% 20% 50% 20%;
