@@ -92,7 +92,7 @@
       background-image: url('hero.jpg');
       background-size: cover;
       background-position: center 30%;
-      opacity: 0.45;
+      opacity: 0.65;
       z-index: 0;
     }
     .hero-bg-overlay {
@@ -100,9 +100,9 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(26,61,46,0.55) 0%,
-        rgba(45,80,22,0.45) 40%,
-        rgba(26,61,79,0.65) 100%
+        rgba(15,35,20,0.5) 0%,
+        rgba(26,55,20,0.35) 40%,
+        rgba(15,30,40,0.55) 100%
       );
       z-index: 1;
     }
@@ -112,13 +112,13 @@
     }
     .hero-particles { z-index: 2; }
     .hero-byline { color: var(--mint); }
-    .hero-logo { color: #f8f5ef; }
+    .hero-logo { color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
     .hero-logo span { color: var(--amber); }
-    .hero-sub { color: rgba(248,245,239,0.8); }
+    .hero-sub { color: rgba(248,245,239,0.85); }
     .hero-divider { background: linear-gradient(90deg, var(--amber), var(--mint)); }
-    .hero-question { color: #f8f5ef; }
+    .hero-question { color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.4); }
     .hero-question em { color: var(--mint); }
-    .hero-tagline { color: rgba(248,245,239,0.8); }
+    .hero-tagline { color: rgba(248,245,239,0.85); }
     .scroll-cue span { color: rgba(248,245,239,0.5); }
     .particle {
       position: absolute;
@@ -480,12 +480,16 @@
     @media (max-width: 800px) { .founder-inner { grid-template-columns: 1fr; gap: 3rem; } }
     .founder-photo {
       width: 100%;
-      aspect-ratio: 3/4;
+      aspect-ratio: 2/3;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 20%;
       border-radius: 2px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-      filter: sepia(15%) contrast(1.05);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,137,26,0.15);
+      filter: sepia(10%) contrast(1.05) brightness(0.98);
+      transition: filter 0.4s;
+    }
+    .founder-photo:hover {
+      filter: sepia(0%) contrast(1.08) brightness(1.02);
     }
     .founder-label {
       font-size: 0.68rem; letter-spacing: 0.42em;
