@@ -53,14 +53,26 @@
       box-shadow: 0 1px 20px rgba(0,0,0,0.07);
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+    .nav-logo-text {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
       font-weight: 300;
-      color: var(--forest);
-      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
       letter-spacing: 0.04em;
     }
-    .nav-logo span { color: var(--amber); }
+    .nav-logo-text span { color: var(--amber); }
+    nav.scrolled .nav-logo-text { color: var(--forest); text-shadow: none; }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-size: 0.78rem;
@@ -621,7 +633,10 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#" class="nav-logo">Tev<span>AI</span></a>
+    <a href="#" class="nav-logo">
+      <img src="logo.png" alt="TevAI seal" />
+      <span class="nav-logo-text">Tev<span>AI</span></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#curriculum">The Idea</a></li>
       <li><a href="#model">The Model</a></li>
@@ -912,6 +927,7 @@
 
   <!-- FOOTER -->
   <footer>
+    <img src="logo.png" alt="TevAI seal" style="width:60px;height:60px;object-fit:contain;margin-bottom:0.8rem;display:block;margin-left:auto;margin-right:auto;opacity:0.85;" />
     <p class="footer-logo">Tev<span>AI</span></p>
     <p class="footer-tag">Regenerative Intelligence Infrastructure</p>
     <p class="footer-copy">© 2026 Stacy La Mell. All rights reserved. TevAI concept and content.</p>
