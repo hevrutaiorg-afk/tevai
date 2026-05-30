@@ -102,12 +102,14 @@
     .hero-bg-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(10,25,15,0.55) 0%,
-        rgba(20,45,15,0.45) 40%,
-        rgba(10,25,35,0.70) 100%
-      );
+      background: 
+        linear-gradient(
+          to bottom,
+          rgba(10,25,15,0.5) 0%,
+          rgba(5,15,8,0.78) 35%,
+          rgba(5,15,8,0.78) 70%,
+          rgba(10,25,35,0.6) 100%
+        );
       z-index: 1;
     }
     .hero > *:not(.hero-bg):not(.hero-bg-overlay):not(.hero-particles) {
@@ -145,7 +147,8 @@
       font-size: 0.72rem;
       letter-spacing: 0.38em;
       text-transform: uppercase;
-      color: var(--sage);
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,1);
       margin-bottom: 2.2rem;
       opacity: 0;
       animation: fadeUp 1s ease 0.2s forwards;
@@ -153,20 +156,38 @@
     .hero-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(5.5rem, 17vw, 13rem);
-      font-weight: 300;
+      font-weight: 600;
       letter-spacing: -0.02em;
       line-height: 0.88;
-      color: var(--forest);
+      color: #ffffff;
+      text-shadow:
+        0 0 10px #fff,
+        0 0 30px #fff,
+        0 0 60px rgba(168,200,120,0.9),
+        0 0 100px rgba(168,200,120,0.6),
+        0 2px 4px rgba(0,0,0,1);
       opacity: 0;
       animation: fadeUp 1.2s ease 0.4s forwards;
     }
-    .hero-logo span { color: var(--amber); }
+    .hero-logo span {
+      color: var(--amber);
+      text-shadow:
+        0 0 10px #fff,
+        0 0 30px var(--amber),
+        0 0 60px rgba(212,137,26,0.9),
+        0 0 100px rgba(212,137,26,0.6),
+        0 2px 4px rgba(0,0,0,1);
+    }
     .hero-sub {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(0.95rem, 2.2vw, 1.35rem);
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
-      color: var(--med);
+      color: #e0f4e0;
+      text-shadow:
+        0 0 8px rgba(168,200,120,0.9),
+        0 0 20px rgba(168,200,120,0.6),
+        0 1px 4px rgba(0,0,0,1);
       letter-spacing: 0.1em;
       margin-top: 1rem;
       opacity: 0;
@@ -182,24 +203,45 @@
     .hero-question {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.5rem, 3.5vw, 2.6rem);
-      font-weight: 400;
-      color: var(--earth);
+      font-weight: 600;
+      color: #ffffff;
       max-width: 750px;
-      line-height: 1.38;
+      line-height: 1.5;
       opacity: 0;
       animation: fadeUp 1s ease 1.5s forwards;
+      text-shadow:
+        0 0 8px #fff,
+        0 0 20px rgba(255,255,255,0.8),
+        0 0 40px rgba(100,220,200,0.7),
+        0 2px 4px rgba(0,0,0,1);
+      padding: 1.2rem 2rem;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-left: 3px solid rgba(127,255,212,0.8);
     }
-    .hero-question em { color: var(--sage); font-style: italic; }
+    .hero-question em {
+      color: #7fffd4;
+      font-style: italic;
+      text-shadow:
+        0 0 8px #7fffd4,
+        0 0 20px rgba(127,255,212,0.9),
+        0 0 40px rgba(127,255,212,0.6);
+    }
     .hero-tagline {
-      margin-top: 2.5rem;
-      font-size: clamp(0.85rem, 1.6vw, 1rem);
-      font-weight: 300;
-      color: var(--deep);
-      letter-spacing: 0.04em;
+      margin-top: 1.5rem;
+      font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: 0.1em;
       opacity: 0;
       animation: fadeUp 1s ease 1.9s forwards;
       max-width: 560px;
       line-height: 1.75;
+      text-shadow:
+        0 0 8px rgba(255,255,255,0.9),
+        0 0 20px rgba(168,200,120,0.7),
+        0 1px 4px rgba(0,0,0,1);
     }
     .scroll-cue {
       position: absolute; bottom: 2.5rem; left: 50%;
