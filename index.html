@@ -360,6 +360,95 @@
       font-style: italic;
     }
 
+    /* ── SLOW AI ── */
+    .slowai {
+      background: linear-gradient(160deg, #0d1f14 0%, #1a3d2e 40%, #1a2d3f 100%);
+      padding: 0;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .slowai-image {
+      width: 100%;
+      max-height: 680px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      opacity: 0.92;
+    }
+    .slowai-content {
+      padding: 7rem 2rem 8rem;
+      text-align: center;
+    }
+    .slowai .section-label { color: var(--mint); }
+    .slowai-phrase {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--white);
+      max-width: 780px;
+      margin: 0 auto 1rem;
+      line-height: 1.4;
+    }
+    .slowai-phrase strong {
+      font-weight: 600;
+      color: var(--amber);
+    }
+    .slowai-divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--amber), var(--mint));
+      margin: 2.5rem auto;
+    }
+    .slowai-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(248,245,239,0.78);
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      line-height: 1.85;
+    }
+    .slowai-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem 1.8rem;
+      max-width: 560px;
+      margin: 2.5rem auto 3.5rem;
+      list-style: none;
+    }
+    .slowai-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--mint);
+      letter-spacing: 0.04em;
+    }
+    .slowai-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(248,245,239,0.65);
+      max-width: 600px;
+      margin: 0 auto 0.6rem;
+      line-height: 1.7;
+      border-left: 2px solid var(--amber);
+      padding-left: 1.8rem;
+      text-align: left;
+    }
+    .slowai-attribution {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--amber);
+      max-width: 600px;
+      margin: 0 auto;
+      padding-left: 1.8rem;
+      text-align: left;
+    }
+
     /* ── PHYSICAL VISION ── */
     .physical {
       background: linear-gradient(160deg, #e8f0e0 0%, #f0ebe0 60%, #deeaf5 100%);
@@ -464,19 +553,6 @@
       box-shadow: 0 30px 80px rgba(45,80,22,0.14), 0 8px 24px rgba(0,0,0,0.07);
       border-radius: 3px; margin-top: 4rem;
     }
-    .infographic-placeholder {
-      max-width: 700px; width: 100%;
-      margin: 4rem auto 0;
-      background: linear-gradient(135deg, #e8f0e0, #deeaf5);
-      padding: 6rem 3rem;
-      border: 1px solid var(--stone);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .infographic-placeholder p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem; font-style: italic;
-      color: var(--sage); text-align: center;
-    }
 
     /* ── ISRAEL ── */
     .israel {
@@ -532,9 +608,7 @@
       filter: sepia(10%) contrast(1.05) brightness(0.98);
       transition: filter 0.4s;
     }
-    .founder-photo:hover {
-      filter: sepia(0%) contrast(1.08) brightness(1.02);
-    }
+    .founder-photo:hover { filter: sepia(0%) contrast(1.08) brightness(1.02); }
     .founder-label {
       font-size: 0.68rem; letter-spacing: 0.42em;
       text-transform: uppercase; color: var(--amber); margin-bottom: 2rem;
@@ -591,10 +665,7 @@
       border: 1px solid rgba(248,245,239,0.4);
       transition: all 0.3s;
     }
-    .cta-btn:hover {
-      background: var(--amber); border-color: var(--amber);
-      transform: translateY(-2px);
-    }
+    .cta-btn:hover { background: var(--amber); border-color: var(--amber); transform: translateY(-2px); }
 
     /* ── CONTACT ── */
     .contact {
@@ -612,9 +683,7 @@
     .contact-email:hover { color: var(--amber); }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--earth); padding: 3rem 2rem; text-align: center;
-    }
+    footer { background: var(--earth); padding: 3rem 2rem; text-align: center; }
     .footer-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.9rem; font-weight: 300;
@@ -639,6 +708,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#curriculum">The Idea</a></li>
+      <li><a href="#slowai">Slow AI</a></li>
       <li><a href="#model">The Model</a></li>
       <li><a href="#israel">Why Israel</a></li>
       <li><a href="#founder">Founder</a></li>
@@ -725,6 +795,44 @@
     </div>
   </section>
 
+  <!-- SLOW AI -->
+  <section class="slowai" id="slowai">
+    <img src="slow-ai-hero.png" alt="Slow AI — machines run at machine speed so humans can live at human speed" class="slowai-image reveal" />
+    <div class="slowai-content">
+      <p class="section-label reveal">A TevAI Framework</p>
+      <h2 class="slowai-phrase reveal">
+        <strong>Machines run at machine speed</strong><br>
+        so humans can live at human speed.
+      </h2>
+      <div class="slowai-divider reveal"></div>
+      <p class="slowai-body reveal">
+        This is not about slowing down technology.<br>
+        It is about what technology makes possible.
+      </p>
+      <p class="slowai-body reveal">
+        When machines carry what machines do best — the repetitive,
+        the computational, the mechanical — humans are freed to do
+        what only humans can:
+      </p>
+      <ul class="slowai-list reveal">
+        <li>create</li>
+        <li>·</li>
+        <li>connect</li>
+        <li>·</li>
+        <li>steward</li>
+        <li>·</li>
+        <li>wonder</li>
+        <li>·</li>
+        <li>belong</li>
+      </ul>
+      <blockquote class="slowai-quote reveal">
+        It is not your duty to finish the work,<br>
+        but neither are you at liberty to neglect it.
+      </blockquote>
+      <p class="slowai-attribution reveal">— Pirkei Avot 2:16</p>
+    </div>
+  </section>
+
   <!-- PHYSICAL VISION -->
   <section class="physical" id="vision">
     <div class="section-inner">
@@ -799,6 +907,8 @@
       </div>
     </div>
   </section>
+
+  <!-- PRINCIPLES -->
   <section class="principles">
     <div class="section-inner">
       <p class="section-label reveal">Design Principles</p>
@@ -940,17 +1050,14 @@
   </footer>
 
   <script>
-    // Nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
 
-    // Scroll reveal
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 
-    // Particles
     const container = document.getElementById('particles');
     const colors = ['rgba(90,122,58,0.28)','rgba(184,134,11,0.22)','rgba(74,143,168,0.18)','rgba(168,200,120,0.3)'];
     for (let i = 0; i < 18; i++) {
